@@ -1,3 +1,4 @@
+/* Reset and global styling */
 * {
     margin: 0;
     padding: 0;
@@ -6,59 +7,54 @@
 
 body {
     font-family: Arial, sans-serif;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Header Banner */
-.header-banner {
-    background-image: url('images/background.JPEG');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
+/* Header / Banner styling */
+header {
+    position: relative;
     text-align: center;
-    color: #1C3A5B; /* Dark blue text for title */
+    color: #fff;
+}
+
+.banner {
+    background: url('images/background.JPEG') no-repeat center center/cover; /* 배너 배경 이미지 */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 
-.header-banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay for readability */
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
 }
 
-.header-content {
-    position: relative;
-    z-index: 1;
-}
-
-.header-content h1 {
+.banner h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
-    color: #FFFFFF; /* White for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #f4e6d7;
 }
 
-.header-content p {
-    font-size: 1.5rem;
-    color: #F0F0F0; /* Light gray text for subtitle */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.banner p {
+    font-size: 1.2rem;
+    color: #e4d3c0;
 }
 
-/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background: #333;
-    padding: 10px 0;
+    background-color: #333;
+    padding: 0.5rem;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
@@ -68,76 +64,83 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    color: #f4e6d7;
 }
 
-/* Projects Section */
+/* Projects section styling */
 #projects {
-    padding: 40px;
+    padding: 4rem 2rem;
+    background: #fafafa;
     text-align: center;
-    background-color: #f4f4f9;
 }
 
 #projects h2 {
     font-size: 2.5rem;
-    color: #1C3A5B;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 2rem;
 }
 
 .project {
     background: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
 }
 
 .project img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-bottom: 2px solid #333;
 }
 
 .project h3 {
     font-size: 1.5rem;
-    color: #1C3A5B;
-    margin: 10px 0;
+    margin: 1rem 0;
+    color: #333;
 }
 
 .project a {
-    color: #007acc;
+    display: block;
     text-decoration: none;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0 0 8px 8px;
     font-weight: bold;
 }
 
 .project a:hover {
-    text-decoration: underline;
+    background: #555;
 }
 
-.project:hover {
-    transform: translateY(-5px);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
+/* Contact section styling */
+#contact {
+    padding: 2rem;
     background: #333;
     color: #fff;
+    text-align: center;
 }
 
-footer a {
-    color: #ffd700;
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#contact a {
+    color: #f4e6d7;
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
+#contact a:hover {
+    color: #fff;
 }
