@@ -1,16 +1,17 @@
-/* Reset some default styling */
-body, h1, h2, h3, p {
+/* 기본 리셋 스타일 */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-}
-
-/* Body and header styling */
-body {
-    background-color: #f4f4f9;
     color: #333;
 }
 
+/* 페이지 배경색 */
+body {
+    background-color: #f4f4f9;
+}
+
+/* 헤더 스타일 */
 header {
     text-align: center;
     padding: 20px;
@@ -25,6 +26,7 @@ header h1 {
 
 header nav ul {
     list-style-type: none;
+    padding-top: 10px;
 }
 
 header nav ul li {
@@ -36,13 +38,14 @@ header nav ul li a {
     color: #e6e6e6;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 header nav ul li a:hover {
     color: #66b3ff;
 }
 
-/* Profile photo styling */
+/* 프로필 사진 스타일 */
 .profile-photo {
     width: 150px;
     height: 150px;
@@ -51,7 +54,7 @@ header nav ul li a:hover {
     margin-top: 10px;
 }
 
-/* Projects section */
+/* 프로젝트 섹션 스타일 */
 #projects {
     text-align: center;
     padding: 40px;
@@ -60,6 +63,7 @@ header nav ul li a:hover {
 #projects h2 {
     color: #003366;
     margin-bottom: 20px;
+    font-size: 2em;
 }
 
 .project {
@@ -67,27 +71,44 @@ header nav ul li a:hover {
     width: 250px;
     margin: 20px;
     vertical-align: top;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 .project img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-bottom: 2px solid #003366;
+}
+
+.project h3 {
+    padding: 10px 0;
+    color: #003366;
 }
 
 .project a {
     display: block;
-    margin-top: 10px;
+    padding: 10px;
     color: #003366;
     font-weight: bold;
     text-decoration: none;
+    background-color: #e6f2ff;
+    transition: background-color 0.3s;
 }
 
 .project a:hover {
-    color: #66b3ff;
+    background-color: #66b3ff;
+    color: #fff;
 }
 
-/* Footer styling */
+/* 푸터 스타일 */
 footer {
     text-align: center;
     padding: 20px;
@@ -95,12 +116,21 @@ footer {
     color: #e6e6e6;
 }
 
+footer h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
 footer a {
     color: #66b3ff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {
     color: #e6e6e6;
 }
-
