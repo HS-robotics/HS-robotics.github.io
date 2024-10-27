@@ -6,29 +6,41 @@
     font-family: Arial, sans-serif;
 }
 
-/* 전체 배너 스타일 */
+/* 배너 스타일 */
 .banner-header {
-    background-image: url("images/background.JPEG"); /* 배경 이미지 파일 경로 */
+    background-image: url("images/background.JPEG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 60vh; /* 배너 높이 */
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
     position: relative;
+    /* 배경을 어둡게 처리 */
+    background-color: rgba(0, 0, 0, 0.5); /* 배경 어두운 오버레이 */
+    background-blend-mode: darken;
+}
+
+.header-content {
+    position: relative;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* 텍스트 배경 반투명 */
+    border-radius: 8px;
 }
 
 .header-content h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #f8f8f8; /* 밝은 텍스트 색상 */
 }
 
 .header-content p {
     font-size: 1.2rem;
     margin-top: 5px;
+    color: #f0f0f0;
 }
 
 /* Navigation */
