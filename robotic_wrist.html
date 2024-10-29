@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robotic Wrist</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add this CSS for the video layout */
+        .media-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .video-container {
+            flex: 1 1 30%; /* Three videos in a row */
+            margin: 10px;
+        }
+
+        video {
+            width: 100%; /* Make videos responsive */
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                flex: 1 1 100%; /* One video per row on smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -67,7 +92,7 @@
             <!-- Local Video -->
             <div class="video-container">
                 <h3>Robotic Wrist: Stiffness Variation</h3>
-                <video controls autoplay loop muted>
+                <video controls>
                     <source src="videos/robotic_wrist_demo1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -75,7 +100,7 @@
 
             <div class="video-container">
                 <h3>Robotic Wrist Demonstration: Grasping Task</h3>
-                <video controls autoplay loop muted>
+                <video controls>
                     <source src="videos/robotic_wrist_demo2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -83,7 +108,7 @@
             
             <div class="video-container">
                 <h3>Robotic Wrist Demonstration: Practical Application</h3>
-                <video controls autoplay loop muted>
+                <video controls>
                     <source src="videos/robotic_wrist_demo3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
