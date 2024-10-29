@@ -47,20 +47,19 @@
         }
 
         /* Video Section */
-       .media-section {
+        .media-section {
             margin: 20px 0;
-            display: flex; /* Use flexbox for the video layout */
-            flex-wrap: wrap; /* Allow videos to wrap to the next line */
-            justify-content: space-between; /* Space between videos */
         }
 
         .video-container {
             width: calc(33.33% - 10px); /* 3 videos per row with spacing */
             margin: 5px;
+            display: inline-block; /* Allows multiple videos per row */
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
+            vertical-align: top; /* Aligns videos at the top */
         }
 
         video {
@@ -113,14 +112,13 @@
     <header>
         <h1>Robotic Wrist</h1>
 
-         <!-- Navigation Menu -->
+        <!-- Navigation Menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
-             </ul>
+            </ul>
         </nav>
-        
     </header>
     
     <main>
@@ -211,7 +209,7 @@
         </section>
     </main>
 
-     <footer>
+    <footer>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:h.sun.robotics@gmail.com">h.sun.robotics@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/hyunsoosun" target="_blank">linkedin.com/in/hyunsoosun</a></p>
