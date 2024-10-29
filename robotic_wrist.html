@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +39,8 @@
         }
 
         /* Project Overview and Details */
-        .project-intro, .project-details {
+        .project-intro,
+        .project-details {
             background-color: #fff;
             border-radius: 8px;
             padding: 20px;
@@ -49,17 +51,29 @@
         /* Video Section */
         .media-section {
             margin: 20px 0;
+            display: flex;
+            /* Use flexbox for the video layout */
+            flex-wrap: wrap;
+            /* Allow videos to wrap to the next line */
         }
 
         .video-container {
-            width: calc(33.33% - 10px); /* 3 videos per row with spacing */
+            width: calc(33.33% - 10px);
+            /* 3 videos per row with spacing */
             margin: 5px;
-            display: inline-block; /* Allows multiple videos per row */
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
-            vertical-align: top; /* Aligns videos at the top */
+            /* Remove display: inline-block; as flexbox handles layout */
+        }
+
+        /* Ensure video containers stack correctly on smaller screens */
+        @media (max-width: 768px) {
+            .video-container {
+                width: 100%;
+                /* Full width on smaller screens */
+            }
         }
 
         video {
@@ -71,12 +85,14 @@
             text-align: center;
             margin: 10px 0;
             padding: 10px;
-            background-color: #e9e9e9; /* Subtle background for video titles */
+            background-color: #e9e9e9;
+            /* Subtle background for video titles */
         }
 
         @media (max-width: 768px) {
             .video-container {
-                width: 100%; /* Full width on smaller screens */
+                width: 100%;
+                /* Full width on smaller screens */
             }
         }
 
@@ -94,8 +110,10 @@
             width: 300px;
             height: auto;
             margin: 5px;
-            border-radius: 8px; /* Rounded corners for images */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            border-radius: 8px;
+            /* Rounded corners for images */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Soft shadow effect */
         }
 
         /* Footer styling */
@@ -108,6 +126,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Robotic Wrist</h1>
@@ -120,7 +139,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <!-- Overview Section -->
         <section class="project-intro">
@@ -189,7 +208,7 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            
+
             <div class="video-container">
                 <h4>Demonstration: Practical Application</h4>
                 <video controls>
@@ -215,4 +234,5 @@
         <p>LinkedIn: <a href="https://www.linkedin.com/in/hyunsoosun" target="_blank">linkedin.com/in/hyunsoosun</a></p>
     </footer>
 </body>
+
 </html>
