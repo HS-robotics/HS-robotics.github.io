@@ -68,6 +68,16 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        justify-content: space-around; /* Space out menu items evenly */
+    }
+    nav ul li {
+        flex: 1 1 auto; /* Allow items to grow and shrink */
+        text-align: center; /* Center text in menu items */
+    }
+}
 nav ul li a:hover {
     color: #1e90ff;
 }
