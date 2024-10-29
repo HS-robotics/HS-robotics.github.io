@@ -9,15 +9,15 @@
         /* Add this CSS for the video layout */
         .media-section {
             display: flex;
-            flex-direction: column; /* Stack videos vertically */
-            align-items: center; /* Center align the videos */
+            flex-wrap: wrap; /* Allow wrapping of video containers */
+            justify-content: space-between; /* Space out videos evenly */
             margin: 20px 0;
         }
 
         .video-container {
-            width: 80%; /* Set a fixed width for the video container */
-            max-width: 600px; /* Optional: limit the maximum width */
-            margin: 10px 0; /* Space between video containers */
+            width: calc(50% - 10px); /* 2 videos per row with some spacing */
+            max-width: 300px; /* Optional: limit the maximum width */
+            margin: 10px; /* Space between video containers */
         }
 
         video {
