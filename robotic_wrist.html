@@ -9,30 +9,25 @@
         /* Add this CSS for the video layout */
         .media-section {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column; /* Stack videos vertically */
+            align-items: center; /* Center align the videos */
             margin: 20px 0;
         }
 
         .video-container {
-            flex: 1 1 30%; /* Set to 30% to show 3 videos in a row */
-            margin: 10px;
+            width: 80%; /* Set a fixed width for the video container */
+            max-width: 600px; /* Optional: limit the maximum width */
+            margin: 10px 0; /* Space between video containers */
         }
 
         video {
             width: 100%; /* Make videos responsive */
-            height: auto;
+            height: auto; /* Maintain aspect ratio */
         }
 
         @media (max-width: 768px) {
             .video-container {
-                flex: 1 1 100%; /* One video per row on smaller screens */
-            }
-        }
-        
-        @media (min-width: 769px) {
-            .video-container {
-                flex: 1 1 30%; /* Three videos in a row on larger screens */
+                width: 100%; /* Full width on smaller screens */
             }
         }
     </style>
