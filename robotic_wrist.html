@@ -15,7 +15,7 @@
         }
 
         .video-container {
-            flex: 1 1 30%; /* Three videos in a row */
+            flex: 1 1 30%; /* Set to 30% to show 3 videos in a row */
             margin: 10px;
         }
 
@@ -27,6 +27,12 @@
         @media (max-width: 768px) {
             .video-container {
                 flex: 1 1 100%; /* One video per row on smaller screens */
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .video-container {
+                flex: 1 1 30%; /* Three videos in a row on larger screens */
             }
         }
     </style>
