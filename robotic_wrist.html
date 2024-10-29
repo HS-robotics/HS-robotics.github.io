@@ -9,15 +9,14 @@
         /* Add this CSS for the video layout */
         .media-section {
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping of video containers */
-            justify-content: space-between; /* Space out videos evenly */
+            flex-direction: column; /* Stack the title and videos vertically */
             margin: 20px 0;
         }
 
         .video-container {
-            width: calc(50% - 10px); /* 2 videos per row with some spacing */
+            width: calc(50% - 5px); /* 2 videos per row with smaller spacing */
             max-width: 300px; /* Optional: limit the maximum width */
-            margin: 10px; /* Space between video containers */
+            margin: 5px; /* Reduced space between video containers */
             display: flex; /* Flexbox for proper alignment */
             flex-direction: column; /* Stack title and video */
             align-items: center; /* Center align items */
@@ -36,10 +35,32 @@
             text-overflow: ellipsis; /* Add ellipsis if title is too long */
         }
 
+        h4 {
+            text-align: center; /* Center align subtitles */
+            margin: 5px 0; /* Margin between title and video */
+        }
+
         @media (max-width: 768px) {
             .video-container {
                 width: 100%; /* Full width on smaller screens */
             }
+        }
+
+        /* Image Gallery Styles */
+        .gallery {
+            margin: 20px 0;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow images to wrap */
+            justify-content: center; /* Center images in the gallery */
+        }
+
+        .gallery-container img {
+            width: 100px; /* Fixed size for images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 5px; /* Space between images */
         }
     </style>
 </head>
@@ -100,10 +121,9 @@
         <!-- Video Section -->
         <section class="media-section">
             <h2>Project Media</h2>
-            <h3> </h3>
             <!-- Local Video -->
             <div class="video-container">
-                <h4> Stiffness Variation</h4>
+                <h4>Stiffness Variation</h4>
                 <video controls>
                     <source src="videos/robotic_wrist_demo1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -111,7 +131,7 @@
             </div>
 
             <div class="video-container">
-                <h4> Demonstration: Grasping Task</h4>
+                <h4>Demonstration: Grasping Task</h4>
                 <video controls>
                     <source src="videos/robotic_wrist_demo2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -119,20 +139,19 @@
             </div>
             
             <div class="video-container">
-                <h4> Demonstration: Practical Application</h4>
+                <h4>Demonstration: Practical Application</h4>
                 <video controls>
                     <source src="videos/robotic_wrist_demo3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            
         </section>
 
         <!-- Image Gallery -->
         <section class="gallery">
-            <h3>Project Gallery</h2>
+            <h3>Project Gallery</h3>
             <div class="gallery-container">
-                <img src="images/ongoing_projects.jpg" alt=" To be published after release.">
+                <img src="images/ongoing_projects.jpg" alt="To be published after release.">
                 <!-- Add more images as needed -->
             </div>
         </section>
